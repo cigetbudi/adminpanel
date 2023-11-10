@@ -1,4 +1,4 @@
-import { Logout, MenuBookTwoTone, Notifications, Settings } from "@mui/icons-material";
+import { Logout, Menu, Notifications, Settings } from "@mui/icons-material";
 import { AppBar, Badge, Box, IconButton, Toolbar } from "@mui/material";
 
 function AppHeader() {
@@ -6,13 +6,15 @@ function AppHeader() {
         <AppBar position="sticky" sx={styles.appBar}>
             <Toolbar>
                 <IconButton onClick={() => console.log("clicked")} color="secondary">
-                    <MenuBookTwoTone></MenuBookTwoTone>
+                    <Menu />
                 </IconButton>
                 <Box 
                     component='img'
                     sx={styles.appLogo}
                     src="/src/assets/sample-logo.png"
+
                 />
+                <Box sx={{flexGrow: 1}} />
                 <IconButton title='Notification' color="secondary">
                     <Badge badgeContent={4} color="error">
                         <Notifications/>
